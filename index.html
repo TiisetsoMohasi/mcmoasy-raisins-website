@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>McMoasyRaisins - Premium Garment Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+        }
+        
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #6B46C1 0%, #4299E1 100%);
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .rotate-animation {
+            animation: rotate 8s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="h-10 w-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold mr-2">
+                            MR
+                        </div>
+                        <span class="logo-text text-2xl font-bold text-gray-800">McMoasy<span class="text-purple-600">Raisins</span></span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#" class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#services" class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#products" class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium">Products</a>
+                        <a href="#careers" class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium">Careers</a>
+                        <a href="#contact" class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-800 hover:text-purple-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-purple-600">Home</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-purple-600">Services</a>
+                <a href="#products" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-purple-600">Products</a>
+                <a href="#careers" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-purple-600">Careers</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-purple-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 logo-text">Crafting Excellence <br> in Every <span class="text-yellow-300">Stitch</span></h1>
+                    <p class="text-xl mb-8">Premium garment solutions tailored to your needs. From hard labor outfits to elegant school uniforms, we deliver quality you can trust.</p>
+                    <div class="flex space-x-4">
+                        <a href="#services" class="bg-white text-purple-600 hover:bg-purple-100 px-6 py-3 rounded-lg font-bold transition duration-300">Our Services</a>
+                        <a href="#contact" class="border-2 border-white hover:bg-white hover:text-purple-600 px-6 py-3 rounded-lg font-bold transition duration-300">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center relative">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Garment production" class="rounded-xl shadow-2xl w-full max-w-lg floating">
+                        <div class="absolute -bottom-5 -right-5 bg-yellow-400 text-purple-900 px-4 py-2 rounded-lg shadow-lg font-bold">
+                            Since 2005
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 logo-text">Our <span class="text-purple-600">Services</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We specialize in creating high-quality garments for various industries and purposes. Our expertise covers a wide range of products.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 product-card">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hard-hat text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Hard Labor Outfits</h3>
+                    <p class="text-gray-600">Durable, comfortable workwear designed to withstand tough conditions while keeping workers safe and professional.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 product-card">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">School Uniforms</h3>
+                    <p class="text-gray-600">Custom-designed uniforms that promote school identity while ensuring comfort and durability for daily wear.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 product-card">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-snowflake text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Freezer Jackets</h3>
+                    <p class="text-gray-600">Insulated jackets specially designed for cold storage environments, providing warmth without compromising mobility.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 product-card">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-dumbbell text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Gym Wear</h3>
+                    <p class="text-gray-600">High-performance elastic garments that provide flexibility, breathability, and style for all your workout needs.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 product-card">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tshirt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Custom Tailoring</h3>
+                    <p class="text-gray-600">Bespoke garment solutions tailored to your exact specifications, whether for individuals or organizations.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg transition duration-300 product-card">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-industry text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Bulk Orders</h3>
+                    <p class="text-gray-600">Efficient production of large quantity orders with consistent quality, perfect for corporate needs and institutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 logo-text">Featured <span class="text-purple-600">Products</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover our latest creations. These products will be featured for 12 hours before being replaced by new arrivals.</p>
+            </div>
+            
+            <div class="relative">
+                <div id="product-carousel" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+                
+                <div class="flex justify-center mt-10">
+                    <button id="prev-product" class="bg-white text-purple-600 hover:bg-purple-100 p-3 rounded-full shadow-md mr-4">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="next-product" class="bg-white text-purple-600 hover:bg-purple-100 p-3 rounded-full shadow-md">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 logo-text">Join Our <span class="text-purple-600">Team</span></h2>
+                    <p class="text-gray-600 mb-6">At McMoasyRaisins, we're always looking for talented individuals to join our growing team. We offer competitive salaries, a positive work environment, and opportunities for growth.</p>
+                    
+                    <div class="bg-purple-50 border-l-4 border-purple-600 p-4 mb-6">
+                        <h3 class="font-bold text-purple-800 mb-2">Current Openings:</h3>
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li class="mb-1">Master Tailor</li>
+                            <li class="mb-1">Sewing Machine Operator</li>
+                            <li class="mb-1">Quality Control Inspector</li>
+                            <li class="mb-1">Production Supervisor</li>
+                            <li>Sales Representative</li>
+                        </ul>
+                    </div>
+                    
+                    <button id="apply-modal-btn" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">
+                        Apply Now
+                    </button>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-10">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Requirements for Applicants:</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-purple-600 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Minimum 2 years experience in garment production (for technical roles)</p>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-purple-600 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Attention to detail and commitment to quality</p>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-purple-600 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Ability to work in a fast-paced environment</p>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-purple-600 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Good communication skills (for customer-facing roles)</p>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-purple-600 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Willingness to learn and adapt to new techniques</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                            <p class="text-yellow-700"><i class="fas fa-info-circle mr-2"></i> Please prepare your CV and any relevant certifications before applying.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 logo-text">Get In <span class="text-purple-600">Touch</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions about our products or services? We'd love to hear from you.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-purple-600 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Maryland, Leribe 300 P.O Box Jonathans 306</p>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-purple-600 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <a href="https://wa.me/message/OWA424TMGP5FN1" class="ml-3 text-gray-700 hover:text-purple-600">+266 5845 3196</a>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-purple-600 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">mohasitiisetso14@gmail.com</p>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-purple-600 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/profile.php?id=61564446987427&mibextid=ZbWKwL" class="h-10 w-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center hover:bg-purple-600 hover:text-white transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="h-10 w-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center hover:bg-purple-600 hover:text-white transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="h-10 w-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center hover:bg-purple-600 hover:text-white transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/tiisetso-mohasi-91835024b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="h-10 w-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center hover:bg-purple-600 hover:text-white transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://wa.me/message/OWA424TMGP5FN1" class="h-10 w-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center hover:bg-purple-600 hover:text-white transition duration-300">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+                        
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="John Doe">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="john@example.com">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="How can we help?">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your message here..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 logo-text">McMoasy<span class="text-purple-400">Raisins</span></h3>
+                    <p class="text-gray-400">Quality garments crafted with precision and care since 2005.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition duration-300">Products</a></li>
+                        <li><a href="#careers" class="text-gray-400 hover:text-white transition duration-300">Careers</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Hard Labor Outfits</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">School Uniforms</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Freezer Jackets</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Gym Wear</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Custom Tailoring</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new products and offers.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 McMoasyRaisins. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://www.facebook.com/profile.php?id=61564446987427&mibextid=ZbWKwL" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tiisetso-mohasi-91835024b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/message/OWA424TMGP5FN1" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Apply Modal -->
+    <div id="apply-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-8 max-w-2xl w-full mx-4 max-h-screen overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">Job Application Form</h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="first-name" class="block text-gray-700 font-medium mb-2">First Name</label>
+                        <input type="text" id="first-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent" required>
+                    </div>
+                    
+                    <div>
+                        <label for="last-name" class="block text-gray-700 font-medium mb-2">Last Name</label>
+                        <input type="text" id="last-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent" required>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent" required>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                    <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent" required>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="position" class="block text-gray-700 font-medium mb-2">Position Applying For</label>
+                    <select id="position" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent" required>
+                        <option value="">Select a position</option>
+                        <option value="Master Tailor">Master Tailor</option>
+                        <option value="Sewing Machine Operator">Sewing Machine Operator</option>
+                        <option value="Quality Control Inspector">Quality Control Inspector</option>
+                        <option value="Production Supervisor">Production Supervisor</option>
+                        <option value="Sales Representative">Sales Representative</option>
+                    </select>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="experience" class="block text-gray-700 font-medium mb-2">Years of Experience</label>
+                    <input type="number" id="experience" min="0" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent" required>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="resume" class="block text-gray-700 font-medium mb-2">Upload Resume/CV</label>
+                    <div class="flex items-center justify-center w-full">
+                        <label for="resume" class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                <i class="fas fa-cloud-upload-alt text-gray-500 text-3xl mb-2"></i>
+                                <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                <p class="text-xs text-gray-500">PDF, DOC, DOCX (Max. 5MB)</p>
+                            </div>
+                            <input id="resume" type="file" class="hidden" accept=".pdf,.doc,.docx" required>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="cover-letter" class="block text-gray-700 font-medium mb-2">Cover Letter</label>
+                    <textarea id="cover-letter" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Tell us why you'd be a great fit for this position..."></textarea>
+                </div>
+                
+                <div class="flex items-center mb-6">
+                    <input id="terms" type="checkbox" class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500" required>
+                    <label for="terms" class="ml-2 text-sm text-gray-700">I agree to the <a href="#" class="text-purple-600 hover:underline">terms and conditions</a></label>
+                </div>
+                
+                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">
+                    Submit Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Apply modal
+        const applyModalBtn = document.getElementById('apply-modal-btn');
+        const applyModal = document.getElementById('apply-modal');
+        const closeModal = document.getElementById('close-modal');
+        
+        applyModalBtn.addEventListener('click', () => {
+            applyModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeModal.addEventListener('click', () => {
+            applyModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        applyModal.addEventListener('click', (e) => {
+            if (e.target === applyModal) {
+                applyModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Product carousel
+        const products = [
+            {
+                id: 1,
+                name: "Industrial Work Jacket",
+                description: "Heavy-duty jacket with reinforced stitching and multiple pockets for tools.",
+                price: "$49.99",
+                image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80",
+                category: "Hard Labor Outfits"
+            },
+            {
+                id: 2,
+                name: "School Uniform Set",
+                description: "Complete uniform package including shirt, pants/skirt, and tie for academic excellence.",
+                price: "$39.99",
+                image: "https://images.unsplash.com/photo-1627552245711-28ad9c022d7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+                category: "School Uniforms"
+            },
+            {
+                id: 3,
+                name: "Insulated Freezer Jacket",
+                description: "Thermal jacket designed for sub-zero temperatures with water-resistant outer layer.",
+                price: "$59.99",
+                image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6e3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+                category: "Freezer Jackets"
+            },
+            {
+                id: 4,
+                name: "Performance Gym Shorts",
+                description: "Breathable, stretchable shorts with moisture-wicking technology for intense workouts.",
+                price: "$29.99",
+                image: "https://images.unsplash.com/photo-1600185365480-7281d3470e11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+                category: "Gym Wear"
+            },
+            {
+                id: 5,
+                name: "Construction Worker Pants",
+                description: "Durable work pants with knee pad pockets and reinforced stitching for longevity.",
+                price: "$44.99",
+                image: "https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+                category: "Hard Labor Outfits"
+            },
+            {
+                id: 6,
+                name: "Elastic Training Top",
+                description: "Form-fitting training top with four-way stretch for unrestricted movement.",
+                price: "$34.99",
+                image: "https://images.unsplash.com/photo-1600185365926-5a2ffe3e314b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+                category: "Gym Wear"
+            },
+            {
+                id: 7,
+                name: "Chef's Uniform Set",
+                description: "Professional chef attire with double-breasted jacket and checkered pants.",
+                price: "$54.99",
+                image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+                category: "Specialty Uniforms"
+            }
+        ];
+        
+        const productCarousel = document.getElementById('product-carousel');
+        const prevBtn = document.getElementById('prev-product');
+        const nextBtn = document.getElementById('next-product');
+        
+        let currentIndex = 0;
+        const itemsPerPage = window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : window.innerWidth < 1280 ? 3 : 4;
+        
+        function displayProducts() {
+            productCarousel.innerHTML = '';
+            
+            const endIndex = Math.min(currentIndex + itemsPerPage, products.length);
+            
+            for (let i = currentIndex; i < endIndex; i++) {
+                const product = products[i];
+                
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card bg-white rounded-xl overflow-hidden shadow-md';
+                productCard.innerHTML = `
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover">
+                        <div class="absolute top-3 right-3 bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold">${product.category}</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">${product.name}</h3>
+                        <p class="text-gray-600 mb-4">${product.description}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-purple-600">${product.price}</span>
+                            <button class="bg-purple-100 text-purple-600 hover:bg-purple-200 px-4 py-2 rounded-lg font-medium transition duration-300">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                productCarousel.appendChild(productCard);
+            }
+        }
+        
+        function updateCarousel() {
+            // Simulate admin updating products (rotating every 5 seconds)
+            const firstProduct = products.shift();
+            products.push(firstProduct);
+            displayProducts();
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            currentIndex = Math.max(0, currentIndex - itemsPerPage);
+            displayProducts();
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex + itemsPerPage < products.length) {
+                currentIndex += itemsPerPage;
+                displayProducts();
+            }
+        });
+        
+        window.addEventListener('resize', () => {
+            const newItemsPerPage = window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : window.innerWidth < 1280 ? 3 : 4;
+            if (newItemsPerPage !== itemsPerPage) {
+                currentIndex = 0;
+                displayProducts();
+            }
+        });
+        
+        // Initial display
+        displayProducts();
+        
+        // Auto-update products every 5 seconds (simulating admin updates)
+        setInterval(updateCarousel, 5000);
+        
+        // Remove products after 12 hours (simulation)
+        setTimeout(() => {
+            products.shift(); // Remove first product
+            if (products.length < 7) {
+                // Add new product to maintain 7 items
+                products.push({
+                    id: 8,
+                    name: "New Arrival: Reflective Safety Vest",
+                    description: "High-visibility vest with reflective strips for nighttime work safety.",
+                    price: "$24.99",
+                    image: "https://images.unsplash.com/photo-1584735422186-bdcc0d212b9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+                    category: "Safety Gear"
+                });
+            }
+            displayProducts();
+        }, 43200000); // 12 hours in milliseconds
+    </script>
+  </body>
+</html>
